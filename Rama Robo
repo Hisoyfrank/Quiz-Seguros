@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Seguro Celular y Robo 360</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:disabled {
+            background-color: #ccc;
+        }
+        #download-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #code-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Seguro Celular y Robo 360</h1>
+        <form id="quiz-form">
+            <!-- Nombre -->
+            <div class="question">
+                <p><strong>Nombre y Apellido:</strong></p>
+                <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre completo" style="width: 100%; padding: 8px;">
+            </div>
+            
+            <!-- Preguntas del Seguro Celular Seguro -->
+        <div class="question">
+            <p><strong>1. ¿Qué tipo de protección brinda el Seguro Celular Seguro?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> Cobertura ante daños accidentales y robo con violencia o intimidación.</label><br>
+                <label><input type="radio" name="q1" value="b"> Cobertura por pérdida o extravío del dispositivo.</label><br>
+                <label><input type="radio" name="q1" value="c"> Protección ante fallas de software.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>2. ¿Qué requisitos son necesarios para contratar el seguro?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> Tener un celular de menos de 24 meses de antigüedad.</label><br>
+                <label><input type="radio" name="q2" value="b"> Ser titular de una tarjeta de crédito o débito de Scotiabank.</label><br>
+                <label><input type="radio" name="q2" value="c"> Contar con un dispositivo registrado en una red internacional.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>3. ¿Qué incluye el beneficio de "Qustodio"?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> Bloqueo inmediato del dispositivo en caso de pérdida.</label><br>
+                <label><input type="radio" name="q3" value="b"> Control parental y monitoreo de navegación en internet.</label><br>
+                <label><input type="radio" name="q3" value="c"> Seguro de vida para el titular.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>4. ¿Cuál es el máximo de eventos cubiertos anualmente por reparación de celular?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> Dos eventos al año.</label><br>
+                <label><input type="radio" name="q4" value="b"> Uno por año calendario.</label><br>
+                <label><input type="radio" name="q4" value="c"> Ilimitados si no superan los $75.000 por evento.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>5. ¿Cuáles son los plazos para reportar un siniestro?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> Hasta 48 horas hábiles posteriores al evento.</label><br>
+                <label><input type="radio" name="q5" value="b"> 72 horas después del incidente.</label><br>
+                <label><input type="radio" name="q5" value="c"> Un tiempo indefinido para el reporte.</label><br>
+            </div>
+        </div>
+
+        <!-- Preguntas del Seguro Robo 360 -->
+        <div class="question">
+            <p><strong>6. ¿Qué tipo de pérdidas cubre el Seguro Robo 360 después de una transacción bancaria?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> Dinero perdido por extravío tras la transacción.</label><br>
+                <label><input type="radio" name="q6" value="b"> Pérdidas patrimoniales por asalto o violencia después de una transacción en cajero o ventanilla bancaria.</label><br>
+                <label><input type="radio" name="q6" value="c"> Pérdidas de ingresos laborales por robo.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>7. ¿En qué tiempo máximo debe reportarse un robo con engaño o extorsión?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> 48 horas posteriores al evento.</label><br>
+                <label><input type="radio" name="q7" value="b"> 24 horas posteriores al evento.</label><br>
+                <label><input type="radio" name="q7" value="c"> 72 horas posteriores al evento.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>8. ¿Cuál es el límite máximo combinado para el Plan 3 en el seguro?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> UF 1.500.</label><br>
+                <label><input type="radio" name="q8" value="b"> UF 2.000.</label><br>
+                <label><input type="radio" name="q8" value="c"> UF 3.000.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>9. ¿Qué cobertura protege al asegurado en caso de un robo con violencia de dispositivos electrónicos?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> Compra Protegida.</label><br>
+                <label><input type="radio" name="q9" value="b"> Robo con Violencia en las Personas.</label><br>
+                <label><input type="radio" name="q9" value="c"> Utilización Forzada en Cajero Automático.</label><br>
+            </div>
+        </div>
+        <div class="question">
+            <p><strong>10. 5.	¿Cuántos eventos cubre el seguro por "Utilización Forzada en Cajero" al año?</strong></p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> Uno por año.</label><br>
+                <label><input type="radio" name="q10" value="b"> Dos eventos por año.</label><br>
+                <label><input type="radio" name="q10" value="c"> Tres eventos sin límite de tope.</label><br>
+            </div>
+        </div>
+        
+
+            <!-- Botón de envío -->
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <!-- Zona de descarga de estadísticas -->
+        <div id="download-container">
+            <h3>Descargar estadísticas</h3>
+            <p>Introduce el código para acceder a tus estadísticas:</p>
+            <input type="text" id="code-input" placeholder="Ingresa el código">
+            <button id="download-stats" class="btn" disabled>Descargar</button>
+        </div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "a",
+            q2: "b",
+        };
+
+        let stats = { 
+            totalAttempts: 0, 
+            correctAnswers: 0, 
+            incorrectAnswers: 0, 
+            lastScore: 0, 
+            lastName: "" 
+        };
+
+        const quizForm = document.getElementById("quiz-form");
+        const downloadBtn = document.getElementById("download-stats");
+        const codeInput = document.getElementById("code-input");
+        const validCode = "2112";
+
+        // Procesar envío del formulario
+        quizForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(quizForm);
+            let name = formData.get("name").trim();
+            if (!name) {
+                alert("Por favor, ingresa tu nombre completo.");
+                return;
+            }
+
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let [question, answer] of formData.entries()) {
+                if (question === "name") continue;
+                if (correctAnswers[question] === answer) {
+                    score++;
+                }
+            }
+
+            stats.totalAttempts++;
+            stats.correctAnswers += score;
+            stats.incorrectAnswers += totalQuestions - score;
+            stats.lastScore = score;
+            stats.lastName = name;
+
+            alert(`¡Gracias ${name}! Obtienes ${score}/${totalQuestions} respuestas correctas.`);
+            downloadBtn.disabled = false; // Permitir descarga
+        });
+
+        // Manejo de descarga de estadísticas
+        downloadBtn.addEventListener("click", () => {
+            const userCode = codeInput.value.trim();
+            if (userCode !== validCode) {
+                alert("El código ingresado es incorrecto. Intenta nuevamente.");
+                return;
+            }
+
+            const readableStats = {
+                "Intentos totales": stats.totalAttempts,
+                "Respuestas correctas": stats.correctAnswers,
+                "Respuestas incorrectas": stats.incorrectAnswers,
+                "Último puntaje obtenido": stats.lastScore,
+                "Último usuario": stats.lastName,
+            };
+
+            const blob = new Blob([JSON.stringify(readableStats, null, 2)], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "estadisticas_quiz.json";
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>
